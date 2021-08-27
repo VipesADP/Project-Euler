@@ -12,8 +12,7 @@ namespace ProjectEuler
         static void Main(string[] args)
         {
             int count = 0;
-
-            int num = 10000;
+            int num = 1000;
             int[] primes = new int[num*3];
 
             for (int i = 1; i <= num; i++)
