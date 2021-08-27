@@ -5,3 +5,10 @@ C:\Users\stefa\source\repos\ProjectEuler\ProjectEuler\obj\Debug\ProjectEuler.csp
 C:\Users\stefa\source\repos\ProjectEuler\ProjectEuler\obj\Debug\ProjectEuler.csproj.CoreCompileInputs.cache
 C:\Users\stefa\source\repos\ProjectEuler\ProjectEuler\obj\Debug\ProjectEuler.exe
 C:\Users\stefa\source\repos\ProjectEuler\ProjectEuler\obj\Debug\ProjectEuler.pdb
+C:\Users\stefa\Documents\GitHub\Project-Euler\Prime Sum of Primes\ProjectEuler\bin\Debug\ProjectEuler.exe.config
+C:\Users\stefa\Documents\GitHub\Project-Euler\Prime Sum of Primes\ProjectEuler\bin\Debug\ProjectEuler.exe
+C:\Users\stefa\Documents\GitHub\Project-Euler\Prime Sum of Primes\ProjectEuler\bin\Debug\ProjectEuler.pdb
+C:\Users\stefa\Documents\GitHub\Project-Euler\Prime Sum of Primes\ProjectEuler\obj\Debug\ProjectEuler.csprojAssemblyReference.cache
+C:\Users\stefa\Documents\GitHub\Project-Euler\Prime Sum of Primes\ProjectEuler\obj\Debug\ProjectEuler.csproj.CoreCompileInputs.cache
+C:\Users\stefa\Documents\GitHub\Project-Euler\Prime Sum of Primes\ProjectEuler\obj\Debug\ProjectEuler.exe
+C:\Users\stefa\Documents\GitHub\Project-Euler\Prime Sum of Primes\ProjectEuler\obj\Debug\ProjectEuler.pdb
