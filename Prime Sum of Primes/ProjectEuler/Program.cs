@@ -12,9 +12,9 @@ namespace ProjectEuler
         static void Main(string[] args)
         {
             int count = 0, sum, num = 1000000;
-            int[] primes = new int[num*3];
+            int[] primes = new int[num];
 
-            for (int i = 1; i <= num; i++)  // Sends each number of num to isPrime to see if it is prime
+            for (int i = 2; i <= num; i++)  // Sends each number of num to isPrime to see if it is prime
             {
                 if (isPrime(i) == true)  // If isPrime true, adds to array of primes
                 {
@@ -67,34 +67,23 @@ namespace ProjectEuler
                 factors[i] = i + 1;
             }*/
 
-            for (int i = 1; i < num; i++)  // This is for the "starting number", eg 1x2 etc then 2x2 etc
+            for (int x = 1; x <= num; x++) // Runs through the numbers in array and multiplys by numbers after (not before, as they will lead to duplicate counts eg. 1x10 and 10x1)
             {
-                /*if (i * i == num)  // Added to check a number x itself, could start array from 1 but im lazy
+                if (num % x == 0)  // Multiplay factors and see if adds to number
                 {
-                    count =+ 1;
-                }*/
-
-                for (int x = i; x < num; x++) // Runs through the numbers in array and multiplys by numbers after (not before, as they will lead to duplicate counts eg. 1x10 and 10x1)
+                    count += 1;
+                    break;
+                }
+                else
                 {
-                    // if (i != num) // Doesnt really matter but o well, since a number x itself will never = itself. its there so deal with it
-                    {
-                        if (i * x == num)  // Multiplay factors and see if adds to number
-                        {
-                            count += 1;
-                        }
-
-                        if (count == 2)
-                        {
-                            break;
-                        }
-                    }
+                    count = 0;
                 }
             }
 
-            if (count != 1)  // A prime will only have 2 factors, ie count = 1, anything else its not prime
-                return false;
-            else
-                return true;
+            if (count == 1)  // A prime will only have 2 factors, ie count = 1, anything else its not prime
+                 return false;
+             else
+                 return true;
         }
     }
 }
