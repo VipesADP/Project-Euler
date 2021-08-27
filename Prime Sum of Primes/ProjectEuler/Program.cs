@@ -33,7 +33,7 @@ namespace ProjectEuler
 
             /*for (int i = 0; i < finalprimes.Length; i++)  // Debug code
             {
-                WriteLine("{0}", finalprimes[i]);
+                    WriteLine("{0}", finalprimes[i]);
             }*/
 
             for (int i = finalprimes.Length; i >= 0; i--)  //Checks which primes = highet prime number
@@ -42,14 +42,22 @@ namespace ProjectEuler
 
                 for (int x = 0; x < i; x++)  // Finds the sum of primes from all to 1, to find highest
                 {
-                    sum = sum + finalprimes[x];
+                    if (sum < num)
+                    {
+                        sum += finalprimes[x];
+                        Write("{0} + ", finalprimes[x]); // Debug
+                    }
                 }
-                WriteLine(sum);
+
+                WriteLine();
 
                 if (isPrime(sum))  // If the sum is prime, Bingo and break, else repeat loop for next set
                 {
                     WriteLine("{0}", sum);
+                    break;
                 }
+                else
+                    WriteLine("{0} is not a prime number", sum);
             }
 
             ReadLine();
