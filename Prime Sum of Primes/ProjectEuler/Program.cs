@@ -11,7 +11,7 @@ namespace ProjectEuler
     {
         static void Main(string[] args)
         {
-            int count = 0, sum, num = 1000;
+            int count = 0, sum, num = 1000000;
             int[] primes = new int[num*3];
 
             for (int i = 1; i <= num; i++)  // Sends each number of num to isPrime to see if it is prime
@@ -20,6 +20,7 @@ namespace ProjectEuler
                 {
                     primes[count] = i;
                     count += 1;
+                    WriteLine(i);
                 }
             }
 
@@ -59,27 +60,32 @@ namespace ProjectEuler
         {
             int num = inum;
             int count = 0;
-            int[] factors = new int[num];
+            //int[] factors = new int[num];
 
-            for (int i = 0; i < num; i++)  // Populates seperate array for prime checking. (Factors)
+            /*for (int i = 0; i < num; i++)  // Populates seperate array for prime checking. (Factors)
             {
                 factors[i] = i + 1;
-            }
+            }*/
 
-            for (int i = 0; i < factors.Length; i++)  // This is for the "starting number", eg 1x2 etc then 2x2 etc
+            for (int i = 1; i < num; i++)  // This is for the "starting number", eg 1x2 etc then 2x2 etc
             {
-                if (factors[i] * factors[i] == num)  // Added to check a number x itself, could start array from 1 but im lazy
+                /*if (i * i == num)  // Added to check a number x itself, could start array from 1 but im lazy
                 {
                     count =+ 1;
-                }
+                }*/
 
                 for (int x = i; x < num; x++) // Runs through the numbers in array and multiplys by numbers after (not before, as they will lead to duplicate counts eg. 1x10 and 10x1)
                 {
-                    if (i != factors.Length) // Doesnt really matter but o well, since a number x itself will never = itself. its there so deal with it
+                    // if (i != num) // Doesnt really matter but o well, since a number x itself will never = itself. its there so deal with it
                     {
-                        if (factors[i] * factors[x] == num)  // Multiplay factors and see if adds to number
+                        if (i * x == num)  // Multiplay factors and see if adds to number
                         {
                             count += 1;
+                        }
+
+                        if (count == 2)
+                        {
+                            break;
                         }
                     }
                 }
